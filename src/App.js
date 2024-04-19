@@ -6,8 +6,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1> Weather React App</h1>
+        <Search />
       </header>
-      <Search />
     </div>
   );
 }
