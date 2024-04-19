@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 export default function Search() {
   let [city, setCity] = useState(" ");
@@ -28,7 +29,12 @@ export default function Search() {
   }
   let form = (
     <form onSubmit={handleSubmit}>
-      <input type="search" placeholder="Type a city" onChange={updateCity} />
+      <input
+        type="search"
+        placeholder="Type a city"
+        onChange={updateCity}
+        className="search"
+      />
       <input type="submit" value="search" />
     </form>
   );
@@ -38,11 +44,21 @@ export default function Search() {
       <div>
         {form}
         <ul>
-          <li>City: {weather.city}</li>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description} </li>
-          <li>Humidity: {weather.humidity} % </li>
-          <li>Wind: {Math.round(weather.wind)} km/h</li>
+          <li>
+            <strong>City</strong>: {weather.city}
+          </li>
+          <li>
+            <strong>Temperature</strong>: {Math.round(weather.temperature)}°C
+          </li>
+          <li>
+            <strong>Description</strong>: {weather.description}{" "}
+          </li>
+          <li>
+            <strong>Humidity</strong>: {weather.humidity} %{" "}
+          </li>
+          <li>
+            <strong>Wind</strong>: {Math.round(weather.wind)} km/h
+          </li>
           <li>
             <img src={weather.icon} alt={weather.description} />{" "}
           </li>

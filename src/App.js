@@ -4,10 +4,15 @@ import Search from "./Search.js";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1> Weather React App</h1>
-        <Search />
-      </header>
+      <h1 className="header"> Weather React App</h1>
+      <Search />
+      <p>
+        This project is{" "}
+        <a href="https://github.com/brookebusteed/weather-react">
+          open-sourced
+        </a>
+        , by <a href="https://github.com/brookebusteed">Brooke Busteed</a>
+      </p>
     </div>
   );
 }
